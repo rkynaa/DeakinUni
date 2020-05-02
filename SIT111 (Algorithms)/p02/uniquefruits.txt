@@ -1,0 +1,6 @@
+     1	apple
+     2	grapes
+     3	mango
+     4	orange
+     5	pineapple
+     6	strawberry
