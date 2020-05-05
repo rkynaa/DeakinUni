@@ -1,0 +1,13 @@
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT232 (Object-Oriented Development)\Prac3.2\Task01\bin\Debug\netcoreapp3.1\Task01.exe
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT232 (Object-Oriented Development)\Prac3.2\Task01\bin\Debug\netcoreapp3.1\Task01.deps.json
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT232 (Object-Oriented Development)\Prac3.2\Task01\bin\Debug\netcoreapp3.1\Task01.runtimeconfig.json
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT232 (Object-Oriented Development)\Prac3.2\Task01\bin\Debug\netcoreapp3.1\Task01.runtimeconfig.dev.json
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT232 (Object-Oriented Development)\Prac3.2\Task01\bin\Debug\netcoreapp3.1\Task01.dll
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT232 (Object-Oriented Development)\Prac3.2\Task01\bin\Debug\netcoreapp3.1\Task01.pdb
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT232 (Object-Oriented Development)\Prac3.2\Task01\obj\Debug\netcoreapp3.1\Task01.csprojAssemblyReference.cache
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT232 (Object-Oriented Development)\Prac3.2\Task01\obj\Debug\netcoreapp3.1\Task01.csproj.CoreCompileInputs.cache
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT232 (Object-Oriented Development)\Prac3.2\Task01\obj\Debug\netcoreapp3.1\Task01.AssemblyInfoInputs.cache
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT232 (Object-Oriented Development)\Prac3.2\Task01\obj\Debug\netcoreapp3.1\Task01.AssemblyInfo.cs
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT232 (Object-Oriented Development)\Prac3.2\Task01\obj\Debug\netcoreapp3.1\Task01.dll
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT232 (Object-Oriented Development)\Prac3.2\Task01\obj\Debug\netcoreapp3.1\Task01.pdb
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT232 (Object-Oriented Development)\Prac3.2\Task01\obj\Debug\netcoreapp3.1\Task01.genruntimeconfig.cache
