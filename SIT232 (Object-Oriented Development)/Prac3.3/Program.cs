@@ -6,8 +6,14 @@ namespace Prac3._3
     {
         static void Main(string[] args)
         {
-            double[] test_arr = {(double) 1, (double) 2, (double) 3};
+            double[] test_arr = {(double) 1, (double) 1};
             MyPolynomial test = new MyPolynomial(test_arr);
+            Console.WriteLine("Current degree: " + test.GetDegree());
+            Console.WriteLine(test.ToString());
+            Console.WriteLine();
+
+            MyPolynomial test2 = new MyPolynomial(test_arr);
+            test = test.Multiply(test2);
             Console.WriteLine("Current degree: " + test.GetDegree());
             Console.WriteLine(test.ToString());
         }
@@ -69,7 +75,7 @@ namespace Prac3._3
             return result;
         }
 
-        MyPolynomial Add(MyPolynomial Another)
+        public MyPolynomial Add(MyPolynomial Another)
         {
             int m;
             if (n > Another.GetDegree())
@@ -80,32 +86,32 @@ namespace Prac3._3
             {
                 m = Another.GetDegree();
             }
-            double[] coeffs_final = new double[m];
+            double[] coeffs_final = new double[m+1];
             
-            for (int i = 0; i < n; i++)
+            for (int i = 0; i <= n; i++)
             {
                 coeffs_final[i] = _coeffs[i];
             }
-            for (int i = 0; i < Another.GetDegree(); i++)
+            for (int i = 0; i <= Another.GetDegree(); i++)
             {
-                coeffs_final[i] = Another._coeffs[i];
+                coeffs_final[i] += Another._coeffs[i];
             }
             
             MyPolynomial result = new MyPolynomial(coeffs_final);
             return result;
         }
 
-        MyPolynomial Multiply(MyPolynomial Another)
+        public MyPolynomial Multiply(MyPolynomial Another)
         {
-            int size = n+Another.GetDegree()-1;
-            double[] coeffs_final = new double[size];
+            int size = n+Another.GetDegree();
+            double[] coeffs_final = new double[size+1];
             for (int i = 0; i < size; i++)
             {
                 coeffs_final[i] = 0;
             }
-            for (int i = 0; i < n; i++)
+            for (int i = 0; i <= n; i++)
             {
-                for (int j = 0; j < Another.GetDegree(); j++)
+                for (int j = 0; j <= Another.GetDegree(); j++)
                 {
                     coeffs_final[i+j] += _coeffs[i]*Another._coeffs[j];
                 }

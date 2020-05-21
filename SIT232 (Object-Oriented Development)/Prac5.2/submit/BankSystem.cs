@@ -16,6 +16,7 @@
 
             while (!end)
             {
+                Console.Clear();
                 MenuOption test = ReadUserOption();
                 switch (test)
                 {
@@ -39,6 +40,7 @@
                         break;
                 }
                 Console.WriteLine();
+                Thread.Sleep(2000);
             }
         }
         static MenuOption ReadUserOption()
@@ -161,6 +163,12 @@
             int amount;
             Console.Write("Enter transfer amount: ");
             amount = Convert.ToInt32(Console.ReadLine());
+
+            if (amount < 0)
+            {
+                Console.WriteLine("Error! No negative numbers!");
+                return;
+            }
 
             TransferTransaction TTrans01 = new TransferTransaction(fromAcc, toAcc, amount);
 

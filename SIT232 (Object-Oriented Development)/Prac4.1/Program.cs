@@ -18,6 +18,10 @@ namespace Prac4._1
 
         public void Withdraw(int amount)
         {
+            if (true)
+            {
+                Withdraw(amount);
+            }
             if (amount > Balance)
             {
                 throw new InvalidOperationException("Insufficient fund");
@@ -35,9 +39,16 @@ namespace Prac4._1
                 Account account = new Account("Sergey", "P.", 100);
                 account.Withdraw(1000);
             }
-            catch (InvalidOperationException exception)
+            catch (Exception exception)
             {
-                Console.WriteLine("The following error detected: " + exception.GetType().ToString()+ " with message \"" + exception.Message+"\"");
+                if (exception is StackOverflowException)
+                {
+                    Console.WriteLine("The following error detected: " + exception.GetType().ToString()+ " with message \"" + exception.Message+"\"");
+                }
+                else if (exception is InvalidOperationException)
+                {
+                    Console.WriteLine("The following error detected: " + exception.GetType().ToString()+ " with message \"" + exception.Message+"\"");
+                }
             }
 
             Console.ReadKey();

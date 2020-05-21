@@ -1,0 +1,11 @@
+D:\Documents\Deakin\SIT232\Prac1.2\Repetition\bin\Debug\netcoreapp3.0\Repetition.exe
+D:\Documents\Deakin\SIT232\Prac1.2\Repetition\bin\Debug\netcoreapp3.0\Repetition.deps.json
+D:\Documents\Deakin\SIT232\Prac1.2\Repetition\bin\Debug\netcoreapp3.0\Repetition.runtimeconfig.json
+D:\Documents\Deakin\SIT232\Prac1.2\Repetition\bin\Debug\netcoreapp3.0\Repetition.runtimeconfig.dev.json
+D:\Documents\Deakin\SIT232\Prac1.2\Repetition\bin\Debug\netcoreapp3.0\Repetition.dll
+D:\Documents\Deakin\SIT232\Prac1.2\Repetition\bin\Debug\netcoreapp3.0\Repetition.pdb
+D:\Documents\Deakin\SIT232\Prac1.2\Repetition\obj\Debug\netcoreapp3.0\Repetition.csprojAssemblyReference.cache
+D:\Documents\Deakin\SIT232\Prac1.2\Repetition\obj\Debug\netcoreapp3.0\Repetition.AssemblyInfoInputs.cache
+D:\Documents\Deakin\SIT232\Prac1.2\Repetition\obj\Debug\netcoreapp3.0\Repetition.AssemblyInfo.cs
+D:\Documents\Deakin\SIT232\Prac1.2\Repetition\obj\Debug\netcoreapp3.0\Repetition.dll
+D:\Documents\Deakin\SIT232\Prac1.2\Repetition\obj\Debug\netcoreapp3.0\Repetition.pdb

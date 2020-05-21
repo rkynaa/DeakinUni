@@ -1,0 +1,11 @@
+D:\Documents\Deakin\SIT232\Prac1.1\SwitchStatement\bin\Debug\netcoreapp3.0\SwitchStatement.exe
+D:\Documents\Deakin\SIT232\Prac1.1\SwitchStatement\bin\Debug\netcoreapp3.0\SwitchStatement.deps.json
+D:\Documents\Deakin\SIT232\Prac1.1\SwitchStatement\bin\Debug\netcoreapp3.0\SwitchStatement.runtimeconfig.json
+D:\Documents\Deakin\SIT232\Prac1.1\SwitchStatement\bin\Debug\netcoreapp3.0\SwitchStatement.runtimeconfig.dev.json
+D:\Documents\Deakin\SIT232\Prac1.1\SwitchStatement\bin\Debug\netcoreapp3.0\SwitchStatement.dll
+D:\Documents\Deakin\SIT232\Prac1.1\SwitchStatement\bin\Debug\netcoreapp3.0\SwitchStatement.pdb
+D:\Documents\Deakin\SIT232\Prac1.1\SwitchStatement\obj\Debug\netcoreapp3.0\SwitchStatement.csprojAssemblyReference.cache
+D:\Documents\Deakin\SIT232\Prac1.1\SwitchStatement\obj\Debug\netcoreapp3.0\SwitchStatement.AssemblyInfoInputs.cache
+D:\Documents\Deakin\SIT232\Prac1.1\SwitchStatement\obj\Debug\netcoreapp3.0\SwitchStatement.AssemblyInfo.cs
+D:\Documents\Deakin\SIT232\Prac1.1\SwitchStatement\obj\Debug\netcoreapp3.0\SwitchStatement.dll
+D:\Documents\Deakin\SIT232\Prac1.1\SwitchStatement\obj\Debug\netcoreapp3.0\SwitchStatement.pdb

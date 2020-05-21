@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Prac3._4
 {
@@ -7,6 +8,7 @@ namespace Prac3._4
         Withdraw,
         Deposit,
         Print,
+        Sort, 
         Quit
     }
     class BankSystem
@@ -15,6 +17,10 @@ namespace Prac3._4
         {
             MenuOption test = ReadUserOption();
             Account rakyan = new Account("Rakyan", 0);
+            Account jonn = new Account("Jonn", 100);
+            Account jonn2 = new Account("Jonn2", 200);
+            Account jonn3 = new Account("Jonn3", 300);
+            Account[] test_arr = {rakyan, jonn, jonn2, jonn3};
             switch (test)
             {
                 case MenuOption.Withdraw:
@@ -28,6 +34,9 @@ namespace Prac3._4
                     break;
                 case MenuOption.Quit:
                     Console.WriteLine("Thank you for using the system! Please come again!");
+                    break;
+                case MenuOption.Sort:
+                    AccountsSorter.Sort(test_arr, 4);
                     break;
                 default:
                     break;
@@ -118,6 +127,14 @@ namespace Prac3._4
             }
         }
 
+        public decimal Balance
+        {
+            get
+            {
+                return this._balance;
+            }
+        }
+
         public bool deposit(decimal amount)
         {
             if(amount > 0)
@@ -164,7 +181,7 @@ namespace Prac3._4
             }
             for (int i = 0; i < b; i++)
             {
-                buckets[Math.Floor((b * accounts[i].Balance)/ M)] = accounts[i];
+                buckets[(int) Math.Floor((b * accounts[i].Balance)/ M)] = accounts[i];
             }
             for (int i = 0; i < b; i++)
             {

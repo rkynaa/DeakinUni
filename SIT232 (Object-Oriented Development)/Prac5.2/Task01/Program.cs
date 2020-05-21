@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace Task01
 {
@@ -20,6 +21,7 @@ namespace Task01
 
             while (!end)
             {
+                Console.Clear();
                 MenuOption test = ReadUserOption();
                 switch (test)
                 {
@@ -43,6 +45,7 @@ namespace Task01
                         break;
                 }
                 Console.WriteLine();
+                Thread.Sleep(2000);
             }
         }
         static MenuOption ReadUserOption()
@@ -166,6 +169,12 @@ namespace Task01
             Console.Write("Enter transfer amount: ");
             amount = Convert.ToInt32(Console.ReadLine());
 
+            if (amount < 0)
+            {
+                Console.WriteLine("Error! No negative numbers!");
+                return;
+            }
+
             TransferTransaction TTrans01 = new TransferTransaction(fromAcc, toAcc, amount);
 
             Console.WriteLine("Execute? (Yes/No)");
@@ -263,6 +272,7 @@ namespace Task01
                 _success = _account.withdraw(_amount);
                 _executed = true;
             }
+            bool temp = _account.deposit(_amount);
         }
 
         public void Rollback()
@@ -410,6 +420,7 @@ namespace Task01
         }
         public void print()
         {
+            Console.Clear();
             Console.WriteLine("Transferred " + _amount.ToString("C") + " from " + _fromAccount.Name + "'s Account to " + _toAccount.Name + "'s Account");
             
             // Printing execution status
@@ -474,6 +485,7 @@ namespace Task01
                 _success = false;
             }
             _executed = true;
+            bool temp = _fromAccount.deposit(_amount);
         }
 
         public void Rollback()

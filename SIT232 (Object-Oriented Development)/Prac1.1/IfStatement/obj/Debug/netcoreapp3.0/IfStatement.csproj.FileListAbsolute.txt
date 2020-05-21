@@ -1,0 +1,11 @@
+D:\Documents\Deakin\SIT232\Prac1.1\IfStatement\obj\Debug\netcoreapp3.0\IfStatement.csprojAssemblyReference.cache
+D:\Documents\Deakin\SIT232\Prac1.1\IfStatement\obj\Debug\netcoreapp3.0\IfStatement.AssemblyInfoInputs.cache
+D:\Documents\Deakin\SIT232\Prac1.1\IfStatement\obj\Debug\netcoreapp3.0\IfStatement.AssemblyInfo.cs
+D:\Documents\Deakin\SIT232\Prac1.1\IfStatement\bin\Debug\netcoreapp3.0\IfStatement.exe
+D:\Documents\Deakin\SIT232\Prac1.1\IfStatement\bin\Debug\netcoreapp3.0\IfStatement.deps.json
+D:\Documents\Deakin\SIT232\Prac1.1\IfStatement\bin\Debug\netcoreapp3.0\IfStatement.runtimeconfig.json
+D:\Documents\Deakin\SIT232\Prac1.1\IfStatement\bin\Debug\netcoreapp3.0\IfStatement.runtimeconfig.dev.json
+D:\Documents\Deakin\SIT232\Prac1.1\IfStatement\bin\Debug\netcoreapp3.0\IfStatement.dll
+D:\Documents\Deakin\SIT232\Prac1.1\IfStatement\bin\Debug\netcoreapp3.0\IfStatement.pdb
+D:\Documents\Deakin\SIT232\Prac1.1\IfStatement\obj\Debug\netcoreapp3.0\IfStatement.dll
+D:\Documents\Deakin\SIT232\Prac1.1\IfStatement\obj\Debug\netcoreapp3.0\IfStatement.pdb

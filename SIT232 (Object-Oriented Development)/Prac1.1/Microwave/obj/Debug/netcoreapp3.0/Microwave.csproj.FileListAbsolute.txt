@@ -1,0 +1,11 @@
+D:\Documents\Deakin\SIT232\Prac1.1\Microwave\bin\Debug\netcoreapp3.0\Microwave.exe
+D:\Documents\Deakin\SIT232\Prac1.1\Microwave\bin\Debug\netcoreapp3.0\Microwave.deps.json
+D:\Documents\Deakin\SIT232\Prac1.1\Microwave\bin\Debug\netcoreapp3.0\Microwave.runtimeconfig.json
+D:\Documents\Deakin\SIT232\Prac1.1\Microwave\bin\Debug\netcoreapp3.0\Microwave.runtimeconfig.dev.json
+D:\Documents\Deakin\SIT232\Prac1.1\Microwave\bin\Debug\netcoreapp3.0\Microwave.dll
+D:\Documents\Deakin\SIT232\Prac1.1\Microwave\bin\Debug\netcoreapp3.0\Microwave.pdb
+D:\Documents\Deakin\SIT232\Prac1.1\Microwave\obj\Debug\netcoreapp3.0\Microwave.csprojAssemblyReference.cache
+D:\Documents\Deakin\SIT232\Prac1.1\Microwave\obj\Debug\netcoreapp3.0\Microwave.AssemblyInfoInputs.cache
+D:\Documents\Deakin\SIT232\Prac1.1\Microwave\obj\Debug\netcoreapp3.0\Microwave.AssemblyInfo.cs
+D:\Documents\Deakin\SIT232\Prac1.1\Microwave\obj\Debug\netcoreapp3.0\Microwave.dll
+D:\Documents\Deakin\SIT232\Prac1.1\Microwave\obj\Debug\netcoreapp3.0\Microwave.pdb

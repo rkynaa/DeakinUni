@@ -1,0 +1,11 @@
+D:\Documents\Deakin\SIT232\Prac1.1\DoCasting\bin\Debug\netcoreapp3.0\DoCasting.exe
+D:\Documents\Deakin\SIT232\Prac1.1\DoCasting\bin\Debug\netcoreapp3.0\DoCasting.deps.json
+D:\Documents\Deakin\SIT232\Prac1.1\DoCasting\bin\Debug\netcoreapp3.0\DoCasting.runtimeconfig.json
+D:\Documents\Deakin\SIT232\Prac1.1\DoCasting\bin\Debug\netcoreapp3.0\DoCasting.runtimeconfig.dev.json
+D:\Documents\Deakin\SIT232\Prac1.1\DoCasting\bin\Debug\netcoreapp3.0\DoCasting.dll
+D:\Documents\Deakin\SIT232\Prac1.1\DoCasting\bin\Debug\netcoreapp3.0\DoCasting.pdb
+D:\Documents\Deakin\SIT232\Prac1.1\DoCasting\obj\Debug\netcoreapp3.0\DoCasting.csprojAssemblyReference.cache
+D:\Documents\Deakin\SIT232\Prac1.1\DoCasting\obj\Debug\netcoreapp3.0\DoCasting.AssemblyInfoInputs.cache
+D:\Documents\Deakin\SIT232\Prac1.1\DoCasting\obj\Debug\netcoreapp3.0\DoCasting.AssemblyInfo.cs
+D:\Documents\Deakin\SIT232\Prac1.1\DoCasting\obj\Debug\netcoreapp3.0\DoCasting.dll
+D:\Documents\Deakin\SIT232\Prac1.1\DoCasting\obj\Debug\netcoreapp3.0\DoCasting.pdb

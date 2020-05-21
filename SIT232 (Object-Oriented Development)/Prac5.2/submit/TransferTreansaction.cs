@@ -1,3 +1,4 @@
+
     class TransferTransaction
     {
         private Account _fromAccount;
@@ -19,6 +20,7 @@
         }
         public void print()
         {
+            Console.Clear();
             Console.WriteLine("Transferred " + _amount.ToString("C") + " from " + _fromAccount.Name + "'s Account to " + _toAccount.Name + "'s Account");
             
             // Printing execution status
@@ -83,6 +85,7 @@
                 _success = false;
             }
             _executed = true;
+            bool temp = _fromAccount.deposit(_amount);
         }
 
         public void Rollback()
@@ -90,5 +93,57 @@
             _withdraw.Rollback();
             _deposit.Rollback();
             _reversed = true;
+        }
+    }
+    class Account
+    {
+        // Instance Variables
+        private decimal _balance;
+        private String _name;
+
+        public Account(String name, decimal balance)
+        {
+            this._name = name;
+            this._balance = balance;
+        }
+
+        // Accessor methods
+        public String Name
+        {
+            get
+            {
+                return this._name;
+            }
+        }
+
+        public bool deposit(decimal amount)
+        {
+            if(amount > 0)
+            {
+                this._balance += amount;
+//                Console.WriteLine("Deposit succeed. New balance: " + this._balance.ToString("C"));
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public bool withdraw(decimal amount)
+        {
+            if (this._balance - amount > 0)
+            {
+                this._balance -= amount;
+//                Console.WriteLine("Withdraw succeed. New balance: " + this._balance.ToString("C"));
+                return true;
+            } else 
+            {
+//                Console.WriteLine("Error: balance not enough for withdrawal!");
+                return false;
+            }
+        }
+        public void print()
+        {
+            Console.WriteLine("Account name: " + this._name + "\nCurrent Balance: " + this._balance.ToString("C"));
         }
     }
