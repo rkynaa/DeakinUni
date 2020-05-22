@@ -11,6 +11,7 @@ namespace Task01
         Deposit,
         Transfer,
         Print,
+        printTransHist,
         Quit
     }
     class BankSystem
@@ -51,6 +52,9 @@ namespace Task01
                     case MenuOption.Print:
                         DoPrint(newBank);
                         break;
+                    case MenuOption.printTransHist:
+                        newBank.PrintTransactionHistory();
+                        break;
                     case MenuOption.Quit:
                         Console.WriteLine("Thank you for using the system! Please come again!");
                         end = !end;
@@ -59,7 +63,7 @@ namespace Task01
                         break;
                 }
                 Console.WriteLine();
-                Thread.Sleep(3000);
+                Thread.Sleep(5000);
             }
         }
         static MenuOption ReadUserOption()
@@ -73,7 +77,8 @@ namespace Task01
                 Console.WriteLine("3. " + MenuOption.Deposit);
                 Console.WriteLine("4. " + MenuOption.Transfer);
                 Console.WriteLine("5. " + MenuOption.Print);
-                Console.WriteLine("6. " + MenuOption.Quit);
+                Console.WriteLine("6. Print transaction history");
+                Console.WriteLine("7. " + MenuOption.Quit);
                 Console.Write("Enter your option: ");
                 try
                 {
@@ -83,7 +88,7 @@ namespace Task01
                 {
                     Console.WriteLine("Error: input must be in number!", optionError);
                 }
-                if (optionInp < 1 || optionInp > 6)
+                if (optionInp < 1 || optionInp > 7)
                 {
                     Console.WriteLine("Error: Input must be between 1 and 4!");
                     optionInp = 0;
@@ -261,21 +266,79 @@ namespace Task01
         }
     }
 
-    class WithdrawTransaction
+    abstract class Transaction
     {
-        private Account _account;
-        private decimal _amount;
+        // Instance variables
+        protected decimal _amount;
+        protected Boolean _success;
         private Boolean _executed;
-        private Boolean _success;
         private Boolean _reversed;
+        private DateTime _dateStamp;
 
-        public WithdrawTransaction(Account account, decimal amount)
+        // Instance properties
+        public abstract Boolean Success
         {
-            this._account = account;
-            this._amount = amount;
+            get;
         }
 
-        public void print()
+        public Boolean Executed
+        {
+            get
+            {
+                return _executed;
+            }
+        }
+
+        public Boolean Reversed
+        {
+            get
+            {
+                return _reversed;
+            }
+        }
+
+        public DateTime DateStamp
+        {
+            get
+            {
+                return _dateStamp;
+            }
+        }
+
+        // Constructor
+        public Transaction(decimal amount)
+        {
+            this._amount = amount;
+            this._executed = false;
+            this._reversed = false;
+            this._success = false;
+        }
+
+        public abstract void print();
+
+        public virtual void Execute()
+        {
+            _dateStamp = DateTime.Now;
+        }
+
+        public virtual void Rollback()
+        {
+            _dateStamp = DateTime.Now;
+        }
+    }
+
+    class WithdrawTransaction : Transaction
+    {
+        private Account _account;
+        private Boolean _executed;
+        private Boolean _reversed;
+
+        public WithdrawTransaction(Account account, decimal amount) : base(amount)
+        {
+            this._account = account;
+        }
+
+        public override void print()
         {
             Console.WriteLine("Account " + _account.Name + "'s Withdrawal amount: " + _amount.ToString("C"));
             _account.print();
@@ -314,7 +377,7 @@ namespace Task01
             }
         }
 
-        public void Execute()
+        public override void Execute()
         {
             if (_executed == true || _account.withdraw(_amount) == false)
             {
@@ -333,46 +396,27 @@ namespace Task01
             _reversed = _account.deposit(_amount);
         }
 
-        public bool Executed
-        {
-            get
-            {
-                return this._executed;
-            }
-        }
-
-        public bool Success
+        public override bool Success
         {
             get
             {
                 return this._success;
             }
         }
-
-        public bool Reversed
-        {
-            get
-            {
-                return this._reversed;
-            }
-        }
     }
 
-    class DepositTransaction
+    class DepositTransaction : Transaction
     {
         private Account _account;
-        private decimal _amount;
         private Boolean _executed;
-        private Boolean _success;
         private Boolean _reversed;
 
-        public DepositTransaction(Account account, decimal amount)
+        public DepositTransaction(Account account, decimal amount) : base(amount)
         {
             this._account = account;
-            this._amount = amount;
         }
 
-        public void print()
+        public override void print()
         {
             Console.WriteLine("Account " + _account.Name + "'s Deposit amount: " + _amount.ToString("C"));
             _account.print();
@@ -426,15 +470,8 @@ namespace Task01
             _reversed = _account.withdraw(_amount);
         }
 
-        public bool Executed
-        {
-            get
-            {
-                return this._executed;
-            }
-        }
 
-        public bool Success
+        public override bool Success
         {
             get
             {
@@ -442,36 +479,25 @@ namespace Task01
             }
         }
 
-        public bool Reversed
-        {
-            get
-            {
-                return this._reversed;
-            }
-        }
-
     }
 
-    class TransferTransaction
+    class TransferTransaction : Transaction
     {
         private Account _fromAccount;
         private Account _toAccount;
-        private decimal _amount;
         private DepositTransaction _deposit;
         private WithdrawTransaction _withdraw;
         private Boolean _executed;
-        private Boolean _success;
         private Boolean _reversed;
 
-        public TransferTransaction(Account fromAccount, Account toAccount, decimal amount)
+        public TransferTransaction(Account fromAccount, Account toAccount, decimal amount) : base(amount)
         {
             this._fromAccount = fromAccount;
             this._toAccount = toAccount;
-            this._amount = amount;
             this._withdraw = new WithdrawTransaction(_fromAccount, _amount);
             this._deposit = new DepositTransaction(_toAccount, _amount);
         }
-        public void print()
+        public override void print()
         {
             Console.Clear();
             Console.WriteLine("Transferred " + _amount.ToString("C") + " from " + _fromAccount.Name + "'s Account to " + _toAccount.Name + "'s Account");
@@ -547,6 +573,14 @@ namespace Task01
             _deposit.Rollback();
             _reversed = true;
         }
+
+        public override bool Success
+        {
+            get
+            {
+                return this._success;
+            }
+        }
     }
     class Account
     {
@@ -605,11 +639,13 @@ namespace Task01
     {
         // Instance variables
         private List<Account> _accounts;
+        private List<Transaction> _transactions;
 
         // Constructor
         public Bank()
         {
             _accounts = new List<Account>();
+            _transactions = new List<Transaction>();
         }
 
         public void AddAccount(Account account)
@@ -631,7 +667,7 @@ namespace Task01
             return null;
         }
 
-        public void ExecuteTransaction (WithdrawTransaction transaction)
+        public void ExecuteTransaction (Transaction transaction)
         {
             try
             {
@@ -642,31 +678,17 @@ namespace Task01
                 Console.WriteLine("Transaction has been executed. Rollback initiated.", with_err);
                 transaction.Rollback();
             }
+            _transactions.Add(transaction);
         }
 
-        public void ExecuteTransaction (DepositTransaction transaction)
+        public void PrintTransactionHistory()
         {
-            try
+            Console.Clear();
+            foreach (Transaction transaction in _transactions)
             {
-                transaction.Execute();
-            }
-            catch (System.InvalidOperationException with_err)
-            {
-                Console.WriteLine("Transaction has been executed. Rollback initiated.", with_err);
-                transaction.Rollback();
-            }
-        }
-        
-        public void ExecuteTransaction (TransferTransaction transaction)
-        {
-            try
-            {
-                transaction.Execute();
-            }
-            catch (System.InvalidOperationException with_err)
-            {
-                Console.WriteLine("Transaction has been executed. Rollback initiated.", with_err);
-                transaction.Rollback();
+                transaction.print();
+                Console.WriteLine("Transaction time: " + transaction.DateStamp + "\n");
+                Thread.Sleep(2000);
             }
         }
     }
