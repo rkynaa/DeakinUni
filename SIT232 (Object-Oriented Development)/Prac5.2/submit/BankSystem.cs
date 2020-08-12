@@ -104,16 +104,6 @@
                     DTrans01.print();
                 } 
             }
-
-            // bool DepositTest = account.deposit(amount);
-            // if (DepositTest)
-            // {
-            //     Console.WriteLine("Deposit succeed!");
-            // }
-            // else
-            // {
-            //     Console.WriteLine("Deposit falied!");
-            // }
         }
         static void DoWithdrawal(Account account)
         {
@@ -133,10 +123,17 @@
                 {
                     WTrans01.Execute();
                 }
-                catch (System.InvalidOperationException with_ex)
+                catch (System.Exception with_ex)
                 {
-                    Console.WriteLine("Transaction has been executed. Rollback initiated.", with_ex);
-                    WTrans01.Rollback();
+                    if (with_ex is InvalidOperationException)
+                    {
+                        Console.WriteLine("Transaction has been executed. Rollback initiated.", with_ex);
+                        WTrans01.Rollback();
+                    }
+                    else
+                    {
+                        Console.WriteLine(with_ex);
+                    }
                 }
                 Console.WriteLine("\nPrint the transaction? (Yes/No)");
                 Console.Write(">> ");
@@ -146,16 +143,6 @@
                     WTrans01.print();
                 } 
             }
-
-            // bool WithdrawTest = account.withdraw(amount);
-            // if (WithdrawTest)
-            // {
-            //     Console.WriteLine("Withdrawal succeed!");
-            // }
-            // else
-            // {
-            //     Console.WriteLine("Withdrawal falied!");
-            // }
         }
 
         static void DoTransfer(Account fromAcc, Account toAcc)
@@ -182,10 +169,17 @@
                 {
                     TTrans01.Execute();
                 }
-                catch (System.InvalidOperationException trans_ex)
+                catch (System.Exception trans_ex)
                 {
-                    Console.WriteLine("Transaction has been executed. Rollback initiated.", trans_ex);
-                    TTrans01.Rollback();
+                    if (trans_ex is InvalidOperationException)
+                    {
+                        Console.WriteLine("Transaction has been executed. Rollback initiated.", trans_ex);
+                        TTrans01.Rollback();
+                    }
+                    else
+                    {
+                        Console.WriteLine(trans_ex);
+                    }
                 }
                 Console.WriteLine("\nPrint the transaction? (Yes/No)");
                 Console.Write(">> ");

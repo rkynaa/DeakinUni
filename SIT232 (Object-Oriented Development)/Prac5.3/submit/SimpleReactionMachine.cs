@@ -52,7 +52,7 @@ namespace SimpleReactionMachine
             timer.AutoReset = true;
 
             // Connect GUI with the Controller and vice versa
-            contoller = new SimpleReactionController();
+            contoller = new myController();
             gui = new Gui();
             gui.Connect(contoller);
             contoller.Connect(gui, new RandomGenerator());
@@ -126,34 +126,131 @@ namespace SimpleReactionMachine
                 Console.SetCursorPosition(0, 10);
             }
         }
+
+        private class myController: SimpleReactionController
+        {
+            int waitTime = 0;
+            int maxTime = 0;
+            public override void Connect(IGui gui, IRandom rng){
+               //override connect method
+               this.aGui = gui;
+               this.aRnd = rng; 
+               this.appState = "init";
+               Init();
+            }
+            
+
+            //Called to initialise the controller
+            public override void Init(){
+                //override init method           
+                this.appState = "detect_coin";
+                this.aGui.SetDisplay("\n                  Insert Coin                       ");
+                waitTime = this.aRnd.GetRandom(10, 25);
+                
+            }
+
+            //Called whenever a coin is inserted into the machine
+            public override void CoinInserted(){
+                //override CoinInserted Method
+                this.appState = "wait";
+                this.aGui.SetDisplay("\n                    Press Go                       ");
+
+            }
+
+            //Called whenever the go/stop button is pressed
+            public override void GoStopPressed(){
+                //override GoStopPressed Methode
+                switch (appState)
+                {
+                    case "wait":
+                        int _resTime = (int)timeResponse / 100; //get time in second
+                        if (_resTime  <  waitTime){
+                            appState = "play";
+                            timeResponse = 0;
+                            maxTime = this.aRnd.GetRandom(1, 10);
+                        }else{
+                            appState = "over";
+                        }
+                        
+                        break;
+
+                    case "play":
+                        int resTime = (int)timeResponse / 100; //get time in second
+                        if (resTime  <  maxTime){
+                            this.aGui.SetDisplay("\n     Max Time "+maxTime+" , current time response : "+resTime);
+                            timeResponse = 0;
+                        }else{
+                            this.aGui.SetDisplay("\n                  Game Over!                          ");
+                            timeResponse = 0;
+                            Init();
+                        }
+                        break;
+                    case "over":
+                        Init();
+                        timeResponse = 0;
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+            //Called to deliver a TICK to the controller
+            public override void Tick(){
+                //Override tick method
+                if (appState == "play"){
+                    timeResponse ++;
+                    this.aGui.SetDisplay("Current Time : "+timeResponse);
+                    if (timeResponse > (maxTime * 100)){
+                        timeResponse = 0;
+                        maxTime = 0;
+                        this.aGui.Init();
+                        Init();
+                    }
+                }
+
+                if (appState == "wait"){
+                    this.aGui.SetDisplay("wait Time : "+timeResponse);
+                    if (waitTime != 0){
+                        timeResponse ++;
+                        if (timeResponse > waitTime){
+                            timeResponse = 0;
+                            waitTime = 0;
+                            this.aGui.Init();
+                            Init();
+                        }
+                    }
+                    
+                }
+            }
+        }
     }
         class SimpleReactionController : IController
     {   
-        IGui aGui;
-        IRandom aRnd;
-        string appState = "";
+        public IGui aGui;
+        public IRandom aRnd;
+        public string appState = "";
         bool validCoinDetected = false;
-        double timeResponse = 0;
+        public double timeResponse = 0;
         public SimpleReactionController()
         {
         }
 
        //Connect controller to gui
         //(This method will be called before any other methods)
-        public void Connect(IGui gui, IRandom rng){
+        public virtual void Connect(IGui gui, IRandom rng){
             this.aGui = gui;
             this.aRnd = rng;
             Init();
         }
 
         //Called to initialise the controller
-        public void Init(){
+        public virtual void Init(){
             appState = "idle";
             this.aGui.SetDisplay("\n                  insert Coin                     ");
         }
 
         //Called whenever a coin is inserted into the machine
-        public void CoinInserted(){
+        public virtual void CoinInserted(){
             if (appState == "idle"){
                  this.aGui.SetDisplay("\n            (Press ENTER to Play)                ");
                  validCoinDetected = true;
@@ -166,7 +263,7 @@ namespace SimpleReactionMachine
         }
 
         //Called whenever the go/stop button is pressed
-        public void GoStopPressed()
+        public virtual void GoStopPressed()
         {
             switch (appState)
             {
@@ -196,15 +293,11 @@ namespace SimpleReactionMachine
         }
 
         //Called to deliver a TICK to the controller
-        public void Tick(){
+        public virtual void Tick(){
             if (appState == "play"){
                 timeResponse ++;
                 this.aGui.SetDisplay("Current Time : "+timeResponse);
-            }
-            // else if (appState == "idle")
-            // {
-            //     this.aGui.Init();
-            // }           
+            }      
         }
     }
 }

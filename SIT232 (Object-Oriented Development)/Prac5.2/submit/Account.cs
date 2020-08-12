@@ -24,7 +24,6 @@
             if(amount > 0)
             {
                 this._balance += amount;
-//                Console.WriteLine("Deposit succeed. New balance: " + this._balance.ToString("C"));
                 return true;
             }
             else
@@ -34,14 +33,20 @@
         }
         public bool withdraw(decimal amount)
         {
-            if (this._balance - amount > 0)
+            if (amount < 0)
+            {
+                throw new Exception("Cannot be negative!");
+            }
+            if (this._balance - amount < 0)
+            {
+                throw new Exception("Balance not enough!");
+            }
+            if (this._balance - amount >= 0)
             {
                 this._balance -= amount;
-//                Console.WriteLine("Withdraw succeed. New balance: " + this._balance.ToString("C"));
                 return true;
             } else 
             {
-//                Console.WriteLine("Error: balance not enough for withdrawal!");
                 return false;
             }
         }

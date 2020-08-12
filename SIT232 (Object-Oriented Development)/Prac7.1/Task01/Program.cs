@@ -96,7 +96,7 @@ namespace Task01
                 }
             } while (optionInp == 0);
             optionInp--;
-            return (MenuOption) optionInp;
+            return (MenuOption)optionInp;
         }
         static void DoDeposit(Bank bank)
         {
@@ -128,7 +128,7 @@ namespace Task01
                 {
                     Console.WriteLine();
                     DTrans01.print();
-                } 
+                }
             }
 
             // bool DepositTest = account.deposit(amount);
@@ -152,7 +152,7 @@ namespace Task01
                 Console.WriteLine("Suggestion: Add new account with desired name!");
                 return;
             }
-            
+
             Console.Write("Enter withdrawal amount: ");
             amount = Convert.ToDecimal(Console.ReadLine());
 
@@ -171,7 +171,7 @@ namespace Task01
                 {
                     Console.WriteLine();
                     WTrans01.print();
-                } 
+                }
             }
 
             // bool WithdrawTest = account.withdraw(amount);
@@ -200,7 +200,7 @@ namespace Task01
 
             Console.WriteLine("Account who recieves the credit");
             Account toAcc = FindAccount(bank);
-            
+
             if (toAcc == null)
             {
                 Console.WriteLine("\nTransaction aborted! Reciever account cannot be found!\n");
@@ -232,7 +232,7 @@ namespace Task01
                 {
                     Console.WriteLine();
                     TTrans01.print();
-                } 
+                }
             }
 
         }
@@ -342,7 +342,7 @@ namespace Task01
         {
             Console.WriteLine("Account " + _account.Name + "'s Withdrawal amount: " + _amount.ToString("C"));
             _account.print();
-            
+
             // Printing execution status
             Console.Write("Executed? ");
             if (_executed)
@@ -388,10 +388,10 @@ namespace Task01
                 _success = _account.withdraw(_amount);
                 _executed = true;
             }
-            bool temp = _account.deposit(_amount);
+            //bool temp = _account.deposit(_amount); //kalau ini di uncomment saldo tidak akan berkurang
         }
 
-        public void Rollback()
+        public override void Rollback()
         {
             _reversed = _account.deposit(_amount);
         }
@@ -420,7 +420,7 @@ namespace Task01
         {
             Console.WriteLine("Account " + _account.Name + "'s Deposit amount: " + _amount.ToString("C"));
             _account.print();
-            
+
             // Printing execution status
             Console.Write("Executed? ");
             if (_executed)
@@ -455,7 +455,7 @@ namespace Task01
             }
         }
 
-        public void Execute()
+        public override void Execute()
         {
             if (_executed == true)
             {
@@ -465,7 +465,7 @@ namespace Task01
             _executed = true;
         }
 
-        public void Rollback()
+        public override void Rollback()
         {
             _reversed = _account.withdraw(_amount);
         }
@@ -501,7 +501,7 @@ namespace Task01
         {
             Console.Clear();
             Console.WriteLine("Transferred " + _amount.ToString("C") + " from " + _fromAccount.Name + "'s Account to " + _toAccount.Name + "'s Account");
-            
+
             // Printing execution status
             Console.Write("Executed? ");
             if (_executed)
@@ -542,13 +542,13 @@ namespace Task01
             _deposit.print();
         }
 
-        public void Execute()
+        public override void Execute()
         {
             if (_executed == true || _fromAccount.withdraw(_amount) == false)
             {
                 throw new System.InvalidOperationException("Transaction has been executed");
             }
-            
+
             // Withdraw amount from the _fromAccount
             _withdraw.Execute();
 
@@ -567,7 +567,7 @@ namespace Task01
             bool temp = _fromAccount.deposit(_amount);
         }
 
-        public void Rollback()
+        public override void Rollback()
         {
             _withdraw.Rollback();
             _deposit.Rollback();
@@ -582,6 +582,7 @@ namespace Task01
             }
         }
     }
+
     class Account
     {
         // Instance Variables
@@ -605,10 +606,10 @@ namespace Task01
 
         public bool deposit(decimal amount)
         {
-            if(amount > 0)
+            if (amount > 0)
             {
                 this._balance += amount;
-//                Console.WriteLine("Deposit succeed. New balance: " + this._balance.ToString("C"));
+                //                Console.WriteLine("Deposit succeed. New balance: " + this._balance.ToString("C"));
                 return true;
             }
             else
@@ -621,11 +622,12 @@ namespace Task01
             if (this._balance - amount > 0)
             {
                 this._balance -= amount;
-//                Console.WriteLine("Withdraw succeed. New balance: " + this._balance.ToString("C"));
+                //                Console.WriteLine("Withdraw succeed. New balance: " + this._balance.ToString("C"));
                 return true;
-            } else 
+            }
+            else
             {
-//                Console.WriteLine("Error: balance not enough for withdrawal!");
+                //                Console.WriteLine("Error: balance not enough for withdrawal!");
                 return false;
             }
         }
@@ -667,7 +669,7 @@ namespace Task01
             return null;
         }
 
-        public void ExecuteTransaction (Transaction transaction)
+        public void ExecuteTransaction(Transaction transaction)
         {
             try
             {
@@ -676,9 +678,14 @@ namespace Task01
             catch (System.InvalidOperationException with_err)
             {
                 Console.WriteLine("Transaction has been executed. Rollback initiated.", with_err);
-                transaction.Rollback();
+                RollbackTransaction(transaction);
             }
             _transactions.Add(transaction);
+        }
+
+        public void RollbackTransaction(Transaction transaction)
+        {
+            transaction.Rollback();
         }
 
         public void PrintTransactionHistory()

@@ -34,6 +34,14 @@
         }
         public bool withdraw(decimal amount)
         {
+            if (amount < 0)
+            {
+                throw new Exception("Cannot be negative!");
+            }
+            if (this._balance - amount < 0)
+            {
+                throw new Exception("Balance not enough!");
+            }
             if (this._balance - amount > 0)
             {
                 this._balance -= amount;

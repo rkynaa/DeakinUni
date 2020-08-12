@@ -27,4 +27,64 @@
             }
             return null;
         }
+
+        public void ExecuteTransaction (WithdrawTransaction transaction)
+        {
+            try
+            {
+                transaction.Execute();
+            }
+            catch (System.Exception with_err)
+            {
+                if (with_err is InvalidOperationException)
+                {
+                    Console.WriteLine("Transaction has been executed. Rollback initiated.", with_err);
+                    transaction.Rollback();
+                }
+                else
+                {
+                    Console.WriteLine(with_err);
+                }
+            }
+        }
+
+        public void ExecuteTransaction (DepositTransaction transaction)
+        {
+            try
+            {
+                transaction.Execute();
+            }
+            catch (System.Exception depo_err)
+            {
+                if (depo_err is InvalidOperationException)
+                {
+                    Console.WriteLine("Transaction has been executed. Rollback initiated.", depo_err);
+                    transaction.Rollback();
+                }
+                else
+                {
+                    Console.WriteLine(depo_err);
+                }
+            }
+        }
+        
+        public void ExecuteTransaction (TransferTransaction transaction)
+        {
+            try
+            {
+                transaction.Execute();
+            }
+            catch (System.Exception trans_err)
+            {
+                if (trans_err is InvalidOperationException)
+                {
+                    Console.WriteLine("Transaction has been executed. Rollback initiated.", trans_err);
+                    transaction.Rollback();
+                }
+                else
+                {
+                    Console.WriteLine(trans_err);
+                }
+            }
+        }
     }

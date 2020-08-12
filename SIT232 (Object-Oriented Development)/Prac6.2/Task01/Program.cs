@@ -584,6 +584,14 @@ namespace Task01
         }
         public bool withdraw(decimal amount)
         {
+            if (amount < 0)
+            {
+                throw new Exception("Cannot be negative!");
+            }
+            if (this._balance - amount < 0)
+            {
+                throw new Exception("Balance not enough!");
+            }
             if (this._balance - amount > 0)
             {
                 this._balance -= amount;
@@ -637,10 +645,17 @@ namespace Task01
             {
                 transaction.Execute();
             }
-            catch (System.InvalidOperationException with_err)
+            catch (System.Exception with_err)
             {
-                Console.WriteLine("Transaction has been executed. Rollback initiated.", with_err);
-                transaction.Rollback();
+                if (with_err is InvalidOperationException)
+                {
+                    Console.WriteLine("Transaction has been executed. Rollback initiated.", with_err);
+                    transaction.Rollback();
+                }
+                else
+                {
+                    Console.WriteLine(with_err);
+                }
             }
         }
 
@@ -650,10 +665,17 @@ namespace Task01
             {
                 transaction.Execute();
             }
-            catch (System.InvalidOperationException with_err)
+            catch (System.Exception depo_err)
             {
-                Console.WriteLine("Transaction has been executed. Rollback initiated.", with_err);
-                transaction.Rollback();
+                if (depo_err is InvalidOperationException)
+                {
+                    Console.WriteLine("Transaction has been executed. Rollback initiated.", depo_err);
+                    transaction.Rollback();
+                }
+                else
+                {
+                    Console.WriteLine(depo_err);
+                }
             }
         }
         
@@ -663,10 +685,17 @@ namespace Task01
             {
                 transaction.Execute();
             }
-            catch (System.InvalidOperationException with_err)
+            catch (System.Exception trans_err)
             {
-                Console.WriteLine("Transaction has been executed. Rollback initiated.", with_err);
-                transaction.Rollback();
+                if (trans_err is InvalidOperationException)
+                {
+                    Console.WriteLine("Transaction has been executed. Rollback initiated.", trans_err);
+                    transaction.Rollback();
+                }
+                else
+                {
+                    Console.WriteLine(trans_err);
+                }
             }
         }
     }

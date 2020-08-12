@@ -1,0 +1,13 @@
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\task3.1\obj\Debug\netcoreapp3.1\task3.1.csprojAssemblyReference.cache
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\task3.1\obj\Debug\netcoreapp3.1\task3.1.csproj.CoreCompileInputs.cache
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\task3.1\obj\Debug\netcoreapp3.1\task3.1.AssemblyInfoInputs.cache
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\task3.1\obj\Debug\netcoreapp3.1\task3.1.AssemblyInfo.cs
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\task3.1\bin\Debug\netcoreapp3.1\task3.1.exe
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\task3.1\bin\Debug\netcoreapp3.1\task3.1.deps.json
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\task3.1\bin\Debug\netcoreapp3.1\task3.1.runtimeconfig.json
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\task3.1\bin\Debug\netcoreapp3.1\task3.1.runtimeconfig.dev.json
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\task3.1\bin\Debug\netcoreapp3.1\task3.1.dll
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\task3.1\bin\Debug\netcoreapp3.1\task3.1.pdb
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\task3.1\obj\Debug\netcoreapp3.1\task3.1.dll
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\task3.1\obj\Debug\netcoreapp3.1\task3.1.pdb
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\task3.1\obj\Debug\netcoreapp3.1\task3.1.genruntimeconfig.cache

@@ -1,0 +1,13 @@
+D:\Year 2\Object Oriented Development\Task 3.3\Task01\Task01\obj\Debug\netcoreapp3.1\Task01.csprojAssemblyReference.cache
+D:\Year 2\Object Oriented Development\Task 3.3\Task01\Task01\obj\Debug\netcoreapp3.1\Task01.csproj.CoreCompileInputs.cache
+D:\Year 2\Object Oriented Development\Task 3.3\Task01\Task01\obj\Debug\netcoreapp3.1\Task01.AssemblyInfoInputs.cache
+D:\Year 2\Object Oriented Development\Task 3.3\Task01\Task01\obj\Debug\netcoreapp3.1\Task01.AssemblyInfo.cs
+D:\Year 2\Object Oriented Development\Task 3.3\Task01\Task01\bin\Debug\netcoreapp3.1\Task01.exe
+D:\Year 2\Object Oriented Development\Task 3.3\Task01\Task01\bin\Debug\netcoreapp3.1\Task01.deps.json
+D:\Year 2\Object Oriented Development\Task 3.3\Task01\Task01\bin\Debug\netcoreapp3.1\Task01.runtimeconfig.json
+D:\Year 2\Object Oriented Development\Task 3.3\Task01\Task01\bin\Debug\netcoreapp3.1\Task01.runtimeconfig.dev.json
+D:\Year 2\Object Oriented Development\Task 3.3\Task01\Task01\bin\Debug\netcoreapp3.1\Task01.dll
+D:\Year 2\Object Oriented Development\Task 3.3\Task01\Task01\bin\Debug\netcoreapp3.1\Task01.pdb
+D:\Year 2\Object Oriented Development\Task 3.3\Task01\Task01\obj\Debug\netcoreapp3.1\Task01.dll
+D:\Year 2\Object Oriented Development\Task 3.3\Task01\Task01\obj\Debug\netcoreapp3.1\Task01.pdb
+D:\Year 2\Object Oriented Development\Task 3.3\Task01\Task01\obj\Debug\netcoreapp3.1\Task01.genruntimeconfig.cache

@@ -5,7 +5,9 @@ import time
 GPIO.setmode(GPIO.BOARD)
 
 # set the pin that connect to the LED
-GPIO.setup(10, GPIO.OUT)
+GPIO.setup(3, GPIO.OUT) # Yellow LED
+GPIO.setup(5, GPIO.OUT) # Red LED
+GPIO.setup(10, GPIO.OUT) # Blue LED
 
 # turn on the LED
 # GPIO.output(10, GPIO.HIGH)
@@ -13,12 +15,21 @@ GPIO.setup(10, GPIO.OUT)
 # set delay
 # time.sleep(1)
 
-# turn off the LED
-# GPIO.output(10, GPIO.LOW)
-
 try:
     while 1:
         GPIO.output(10, GPIO.HIGH)
-	time.sleep(1)
-except KeyboardInterrupt:
+	time.sleep(0.25)
 	GPIO.output(10, GPIO.LOW)
+	time.sleep(0.25)
+        GPIO.output(3, GPIO.HIGH)
+	time.sleep(0.25)
+	GPIO.output(3, GPIO.LOW)
+	time.sleep(0.25)
+        GPIO.output(5, GPIO.HIGH)
+	time.sleep(0.25)
+	GPIO.output(5, GPIO.LOW)
+	time.sleep(0.25)
+except KeyboardInterrupt:
+	GPIO.cleanup()
+
+

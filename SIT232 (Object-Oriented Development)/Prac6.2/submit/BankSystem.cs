@@ -110,15 +110,7 @@
 
             if (exe_d == "yes")
             {
-                try
-                {
-                    DTrans01.Execute();
-                }
-                catch (System.InvalidOperationException depo_ex)
-                {
-                    Console.WriteLine("Transaction has been executed. Rollback initiated.", depo_ex);
-                    DTrans01.Rollback();
-                }
+                bank.ExecuteTransaction(DTrans01);
                 Console.WriteLine("\nPrint the transaction? (Yes/No)");
                 Console.Write(">> ");
                 if (Console.ReadLine().ToLower() == "yes" || Console.ReadLine().ToLower() == "y")
@@ -161,15 +153,7 @@
 
             if (exe_w == "yes")
             {
-                try
-                {
-                    WTrans01.Execute();
-                }
-                catch (System.InvalidOperationException with_ex)
-                {
-                    Console.WriteLine("Transaction has been executed. Rollback initiated.", with_ex);
-                    WTrans01.Rollback();
-                }
+                bank.ExecuteTransaction(WTrans01);
                 Console.WriteLine("\nPrint the transaction? (Yes/No)");
                 Console.Write(">> ");
                 if (Console.ReadLine().ToLower() == "yes" || Console.ReadLine().ToLower() == "y")
@@ -230,15 +214,7 @@
 
             if (exe_t == "yes")
             {
-                try
-                {
-                    TTrans01.Execute();
-                }
-                catch (System.InvalidOperationException trans_ex)
-                {
-                    Console.WriteLine("Transaction has been executed. Rollback initiated.", trans_ex);
-                    TTrans01.Rollback();
-                }
+                bank.ExecuteTransaction(TTrans01);
                 Console.WriteLine("\nPrint the transaction? (Yes/No)");
                 Console.Write(">> ");
                 if (Console.ReadLine().ToLower() == "yes" || Console.ReadLine().ToLower() == "yes")

@@ -1,0 +1,11 @@
+C:\temp\Tugas Mas Dhika\26-05-2020\Task7.1\Task01\Task01\Task01\bin\Debug\netcoreapp2.1\Task01.deps.json
+C:\temp\Tugas Mas Dhika\26-05-2020\Task7.1\Task01\Task01\Task01\bin\Debug\netcoreapp2.1\Task01.runtimeconfig.json
+C:\temp\Tugas Mas Dhika\26-05-2020\Task7.1\Task01\Task01\Task01\bin\Debug\netcoreapp2.1\Task01.runtimeconfig.dev.json
+C:\temp\Tugas Mas Dhika\26-05-2020\Task7.1\Task01\Task01\Task01\bin\Debug\netcoreapp2.1\Task01.dll
+C:\temp\Tugas Mas Dhika\26-05-2020\Task7.1\Task01\Task01\Task01\bin\Debug\netcoreapp2.1\Task01.pdb
+C:\temp\Tugas Mas Dhika\26-05-2020\Task7.1\Task01\Task01\Task01\obj\Debug\netcoreapp2.1\Task01.csprojAssemblyReference.cache
+C:\temp\Tugas Mas Dhika\26-05-2020\Task7.1\Task01\Task01\Task01\obj\Debug\netcoreapp2.1\Task01.csproj.CoreCompileInputs.cache
+C:\temp\Tugas Mas Dhika\26-05-2020\Task7.1\Task01\Task01\Task01\obj\Debug\netcoreapp2.1\Task01.AssemblyInfoInputs.cache
+C:\temp\Tugas Mas Dhika\26-05-2020\Task7.1\Task01\Task01\Task01\obj\Debug\netcoreapp2.1\Task01.AssemblyInfo.cs
+C:\temp\Tugas Mas Dhika\26-05-2020\Task7.1\Task01\Task01\Task01\obj\Debug\netcoreapp2.1\Task01.dll
+C:\temp\Tugas Mas Dhika\26-05-2020\Task7.1\Task01\Task01\Task01\obj\Debug\netcoreapp2.1\Task01.pdb

@@ -1,28 +1,24 @@
-
-    class TransferTransaction
+    class TransferTransaction : Transaction
     {
         private Account _fromAccount;
         private Account _toAccount;
-        private decimal _amount;
         private DepositTransaction _deposit;
         private WithdrawTransaction _withdraw;
         private Boolean _executed;
-        private Boolean _success;
         private Boolean _reversed;
 
-        public TransferTransaction(Account fromAccount, Account toAccount, decimal amount)
+        public TransferTransaction(Account fromAccount, Account toAccount, decimal amount) : base(amount)
         {
             this._fromAccount = fromAccount;
             this._toAccount = toAccount;
-            this._amount = amount;
             this._withdraw = new WithdrawTransaction(_fromAccount, _amount);
             this._deposit = new DepositTransaction(_toAccount, _amount);
         }
-        public void print()
+        public override void print()
         {
             Console.Clear();
             Console.WriteLine("Transferred " + _amount.ToString("C") + " from " + _fromAccount.Name + "'s Account to " + _toAccount.Name + "'s Account");
-            
+
             // Printing execution status
             Console.Write("Executed? ");
             if (_executed)
@@ -63,13 +59,13 @@
             _deposit.print();
         }
 
-        public void Execute()
+        public override void Execute()
         {
             if (_executed == true || _fromAccount.withdraw(_amount) == false)
             {
                 throw new System.InvalidOperationException("Transaction has been executed");
             }
-            
+
             // Withdraw amount from the _fromAccount
             _withdraw.Execute();
 
@@ -88,62 +84,18 @@
             bool temp = _fromAccount.deposit(_amount);
         }
 
-        public void Rollback()
+        public override void Rollback()
         {
             _withdraw.Rollback();
             _deposit.Rollback();
             _reversed = true;
         }
-    }
-    class Account
-    {
-        // Instance Variables
-        private decimal _balance;
-        private String _name;
 
-        public Account(String name, decimal balance)
-        {
-            this._name = name;
-            this._balance = balance;
-        }
-
-        // Accessor methods
-        public String Name
+        public override bool Success
         {
             get
             {
-                return this._name;
+                return this._success;
             }
-        }
-
-        public bool deposit(decimal amount)
-        {
-            if(amount > 0)
-            {
-                this._balance += amount;
-//                Console.WriteLine("Deposit succeed. New balance: " + this._balance.ToString("C"));
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-        public bool withdraw(decimal amount)
-        {
-            if (this._balance - amount > 0)
-            {
-                this._balance -= amount;
-//                Console.WriteLine("Withdraw succeed. New balance: " + this._balance.ToString("C"));
-                return true;
-            } else 
-            {
-//                Console.WriteLine("Error: balance not enough for withdrawal!");
-                return false;
-            }
-        }
-        public void print()
-        {
-            Console.WriteLine("Account name: " + this._name + "\nCurrent Balance: " + this._balance.ToString("C"));
         }
     }

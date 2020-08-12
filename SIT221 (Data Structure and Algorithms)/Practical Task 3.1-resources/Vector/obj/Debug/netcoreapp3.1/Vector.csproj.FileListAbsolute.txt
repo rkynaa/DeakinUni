@@ -1,0 +1,13 @@
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\Practical Task 3.1-resources\Vector\bin\Debug\netcoreapp3.1\Vector.exe
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\Practical Task 3.1-resources\Vector\bin\Debug\netcoreapp3.1\Vector.deps.json
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\Practical Task 3.1-resources\Vector\bin\Debug\netcoreapp3.1\Vector.runtimeconfig.json
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\Practical Task 3.1-resources\Vector\bin\Debug\netcoreapp3.1\Vector.runtimeconfig.dev.json
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\Practical Task 3.1-resources\Vector\bin\Debug\netcoreapp3.1\Vector.dll
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\Practical Task 3.1-resources\Vector\bin\Debug\netcoreapp3.1\Vector.pdb
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\Practical Task 3.1-resources\Vector\obj\Debug\netcoreapp3.1\Vector.csprojAssemblyReference.cache
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\Practical Task 3.1-resources\Vector\obj\Debug\netcoreapp3.1\Vector.csproj.CoreCompileInputs.cache
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\Practical Task 3.1-resources\Vector\obj\Debug\netcoreapp3.1\Vector.AssemblyInfoInputs.cache
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\Practical Task 3.1-resources\Vector\obj\Debug\netcoreapp3.1\Vector.AssemblyInfo.cs
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\Practical Task 3.1-resources\Vector\obj\Debug\netcoreapp3.1\Vector.dll
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\Practical Task 3.1-resources\Vector\obj\Debug\netcoreapp3.1\Vector.pdb
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\Practical Task 3.1-resources\Vector\obj\Debug\netcoreapp3.1\Vector.genruntimeconfig.cache

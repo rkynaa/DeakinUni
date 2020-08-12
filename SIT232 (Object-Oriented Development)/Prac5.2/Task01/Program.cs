@@ -138,10 +138,17 @@ namespace Task01
                 {
                     WTrans01.Execute();
                 }
-                catch (System.InvalidOperationException with_ex)
+                catch (System.Exception with_ex)
                 {
-                    Console.WriteLine("Transaction has been executed. Rollback initiated.", with_ex);
-                    WTrans01.Rollback();
+                    if (with_ex is InvalidOperationException)
+                    {
+                        Console.WriteLine("Transaction has been executed. Rollback initiated.", with_ex);
+                        WTrans01.Rollback();
+                    }
+                    else
+                    {
+                        Console.WriteLine(with_ex);
+                    }
                 }
                 Console.WriteLine("\nPrint the transaction? (Yes/No)");
                 Console.Write(">> ");
@@ -187,10 +194,17 @@ namespace Task01
                 {
                     TTrans01.Execute();
                 }
-                catch (System.InvalidOperationException trans_ex)
+                catch (System.Exception trans_ex)
                 {
-                    Console.WriteLine("Transaction has been executed. Rollback initiated.", trans_ex);
-                    TTrans01.Rollback();
+                    if (trans_ex is InvalidOperationException)
+                    {
+                        Console.WriteLine("Transaction has been executed. Rollback initiated.", trans_ex);
+                        TTrans01.Rollback();
+                    }
+                    else
+                    {
+                        Console.WriteLine(trans_ex);
+                    }
                 }
                 Console.WriteLine("\nPrint the transaction? (Yes/No)");
                 Console.Write(">> ");
@@ -518,10 +532,13 @@ namespace Task01
 
         public bool deposit(decimal amount)
         {
+            if (amount < 0)
+            {
+                throw new Exception("Cannot be negative!");
+            }
             if(amount > 0)
             {
                 this._balance += amount;
-//                Console.WriteLine("Deposit succeed. New balance: " + this._balance.ToString("C"));
                 return true;
             }
             else
@@ -531,14 +548,20 @@ namespace Task01
         }
         public bool withdraw(decimal amount)
         {
-            if (this._balance - amount > 0)
+            if (amount < 0)
+            {
+                throw new Exception("Cannot be negative!");
+            }
+            if (this._balance - amount < 0)
+            {
+                throw new Exception("Balance not enough!");
+            }
+            if (this._balance - amount >= 0)
             {
                 this._balance -= amount;
-//                Console.WriteLine("Withdraw succeed. New balance: " + this._balance.ToString("C"));
                 return true;
             } else 
             {
-//                Console.WriteLine("Error: balance not enough for withdrawal!");
                 return false;
             }
         }
