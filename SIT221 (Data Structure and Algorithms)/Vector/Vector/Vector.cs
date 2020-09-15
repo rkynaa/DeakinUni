@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Vector
 {
-
-    public class Vector<T>
+    public class Vector<T> where T : IComparable<T>
     {
 
         // This constant determines the default number of elements in a newly created vector.
@@ -17,11 +15,15 @@ namespace Vector
         // In fact, all the elements are to be stored in this private  array. 
         // You will just write extra functionality (methods) to make the work with the array more convenient for the user.
         private T[] data;
+
         // This property represents the number of elements in the vector
         public int Count { get; private set; } = 0;
 
         // This property represents the maximum number of elements (capacity) in the vector
-        public int Capacity { get; private set; } = 0;
+        public int Capacity
+        {
+            get { return data.Length; }
+        }
 
         // This is an overloaded constructor
         public Vector(int capacity)
@@ -53,19 +55,16 @@ namespace Vector
         // It copies the elements of 'data' (the existing array) to 'newData' (the new array), and then makes data pointing to 'newData'.
         private void ExtendData(int extraCapacity)
         {
-            T[] newData = new T[data.Length + extraCapacity];
-            for (int i = 0; i < Count; i++)
-            {
-                newData[i] = data[i];
-                data = newData;
-            }
+            T[] newData = new T[Capacity + extraCapacity];
+            for (int i = 0; i < Count; i++) newData[i] = data[i];
+            data = newData;
         }
 
         // This method adds a new element to the existing array.
         // If the internal array is out of capacity, its capacity is first extended to fit the new element.
         public void Add(T element)
         {
-            if (Count == data.Length) ExtendData(DEFAULT_CAPACITY);
+            if (Count == Capacity) ExtendData(DEFAULT_CAPACITY);
             data[Count++] = element;
         }
 
@@ -81,56 +80,47 @@ namespace Vector
             }
             return -1;
         }
-        // TODO:********************************************************************************************
-        // TODO: Your task is to implement all the remaining methods.
-        // Read the instruction carefully, study the code examples from above as they should help you to write the rest of the code.
 
-        public void Insert(int index, T element)
+        public ISorter Sorter { set; get; } = new DefaultSorter();
+
+        internal class DefaultSorter : ISorter
         {
-            if (index < 0 || index > Count) throw new IndexOutOfRangeException(); //if outside of array throw new exception
-            if (Count == Capacity) ExtendData(DEFAULT_CAPACITY); //if the the total space is taken increase the size of the array
-            if (index == Count)
+            public void Sort<K>(K[] sequence, IComparer<K> comparer) where K : IComparable<K>
             {
-                Add(element);
-                return;
-            }
-            if (index >= 0 && index < Count)
-            {
-                for (int i = Count; i > index; i--)
-                {
-                    data[i] = data[i - 1];
-                }
-                data[index] = element;
-                Count++;
+                if (comparer == null) comparer = Comparer<K>.Default;
+                Array.Sort(sequence, comparer);
             }
         }
-        public void Clear()
+
+        public void Sort()
         {
-            T[] clearArray = new T[Count]; // create a new array that allows and set the size equal to the new count
-            data = clearArray;
-            Count = 0; // set the index of the array equal to 0
+            if (Sorter == null) Sorter = new DefaultSorter();
+            Array.Resize(ref data, Count);
+            Sorter.Sort(data, null);
         }
-        public bool Contains(T element)
+
+        public void Sort(IComparer<T> comparer)
         {
-            int exists = IndexOf(element); // assign the valuse of indexOf to exists
-            if (exists > -1) //if index off does not return a value of -1 or a value grater than 0 it exists
-            {
-                return true;
-            }
-            return false;
+            if (Sorter == null) Sorter = new DefaultSorter();
+            Array.Resize(ref data, Count);
+            if (comparer == null) Sorter.Sort(data, null);
+            else Sorter.Sort(data, comparer);
         }
         public bool Remove(T element)
         {
-            int i = IndexOf(element);
-            if (i >= 0)
+            // Function: to remove an item based in the specified element
+            int num = IndexOf(element);
+            if (num != -1)
             {
-                RemoveAt(i);
+                RemoveAt(num);
                 return true;
             }
             return false;
         }
+
         public void RemoveAt(int index)
         {
+            // Function: to remove an item based in the specified index
             if (index < 0 || index >= Count)
             {
                 throw new IndexOutOfRangeException();
@@ -141,17 +131,5 @@ namespace Vector
             }
             Count--;
         }
-        public override string ToString()
-        {
-            StringBuilder newString = new StringBuilder();
-            newString.Append("[");
-            for (int i = 0; i < Count; i++)
-            {
-                newString.Append(data[i]);
-                newString.Append(",");
-            }
-            newString.Append("]");
-            return newString.ToString();
-        }
-    }
+    }   
 }
