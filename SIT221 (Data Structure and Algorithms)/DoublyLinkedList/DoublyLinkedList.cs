@@ -200,20 +200,14 @@ namespace DoublyLinkedList
 
         public void Clear()
         {
-            Node<T> curr = Head;
-            while (curr != Tail)
+            Node<T> curr1, curr2;
+            curr1 = Head.Next;
+            while (curr1 != Tail)
             {
-                curr = curr.Next;
-                curr.Previous.Previous = null;
-                curr.Previous.Next = null;
+                curr2 = curr1.Next;
+                Remove(curr1);
+                curr1 = curr2;
             }
-            curr.Previous = null;
-
-            // Set the list to the initial state
-            Head = new Node<T>(default(T), null, null);
-            Tail = new Node<T>(default(T), Head, null);
-            Head.Next = Tail;
-
             Count = 0;
         }
 

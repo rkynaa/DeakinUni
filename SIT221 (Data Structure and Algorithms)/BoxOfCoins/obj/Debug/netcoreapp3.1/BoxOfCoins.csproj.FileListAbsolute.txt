@@ -1,0 +1,13 @@
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\BoxOfCoins\bin\Debug\netcoreapp3.1\BoxOfCoins.exe
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\BoxOfCoins\bin\Debug\netcoreapp3.1\BoxOfCoins.deps.json
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\BoxOfCoins\bin\Debug\netcoreapp3.1\BoxOfCoins.runtimeconfig.json
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\BoxOfCoins\bin\Debug\netcoreapp3.1\BoxOfCoins.runtimeconfig.dev.json
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\BoxOfCoins\bin\Debug\netcoreapp3.1\BoxOfCoins.dll
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\BoxOfCoins\bin\Debug\netcoreapp3.1\BoxOfCoins.pdb
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\BoxOfCoins\obj\Debug\netcoreapp3.1\BoxOfCoins.csprojAssemblyReference.cache
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\BoxOfCoins\obj\Debug\netcoreapp3.1\BoxOfCoins.csproj.CoreCompileInputs.cache
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\BoxOfCoins\obj\Debug\netcoreapp3.1\BoxOfCoins.AssemblyInfoInputs.cache
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\BoxOfCoins\obj\Debug\netcoreapp3.1\BoxOfCoins.AssemblyInfo.cs
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\BoxOfCoins\obj\Debug\netcoreapp3.1\BoxOfCoins.dll
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\BoxOfCoins\obj\Debug\netcoreapp3.1\BoxOfCoins.pdb
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\BoxOfCoins\obj\Debug\netcoreapp3.1\BoxOfCoins.genruntimeconfig.cache

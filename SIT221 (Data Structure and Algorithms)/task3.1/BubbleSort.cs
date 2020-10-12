@@ -9,6 +9,13 @@ namespace Vector
     // Bubble Sort
     public class BubbleSort : ISorter
     {
+
+        public int swap<K>(K[] sequence, int j) where K : IComparable<K>
+        {
+            var tmp = sequence[j + 1];
+            sequence[j + 1] = sequence[j];
+            sequence[j] = tmp;
+        }
         public void Sort<K>(K[] sequence, IComparer<K> comparer) where K : IComparable<K>
         {
             // For loop for the first bubble

@@ -1,0 +1,13 @@
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\testing\bin\Debug\netcoreapp3.1\testing.exe
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\testing\bin\Debug\netcoreapp3.1\testing.deps.json
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\testing\bin\Debug\netcoreapp3.1\testing.runtimeconfig.json
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\testing\bin\Debug\netcoreapp3.1\testing.runtimeconfig.dev.json
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\testing\bin\Debug\netcoreapp3.1\testing.dll
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\testing\bin\Debug\netcoreapp3.1\testing.pdb
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\testing\obj\Debug\netcoreapp3.1\testing.csprojAssemblyReference.cache
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\testing\obj\Debug\netcoreapp3.1\testing.csproj.CoreCompileInputs.cache
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\testing\obj\Debug\netcoreapp3.1\testing.AssemblyInfoInputs.cache
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\testing\obj\Debug\netcoreapp3.1\testing.AssemblyInfo.cs
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\testing\obj\Debug\netcoreapp3.1\testing.dll
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\testing\obj\Debug\netcoreapp3.1\testing.pdb
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\testing\obj\Debug\netcoreapp3.1\testing.genruntimeconfig.cache

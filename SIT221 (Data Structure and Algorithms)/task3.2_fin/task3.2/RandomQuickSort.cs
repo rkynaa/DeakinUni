@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vector
+namespace task3._2
 {
     // Randomized Quick Sort
     public class RandomizedQuickSort : ISorter

@@ -1,0 +1,11 @@
+C:\temp\Tugas Mas  Dhika\14-09-2020\Task 6.2\Practical Task 6.2\task_6.2_netcore\task_6.2_netcore\bin\Debug\netcoreapp2.1\task_6.2_netcore.deps.json
+C:\temp\Tugas Mas  Dhika\14-09-2020\Task 6.2\Practical Task 6.2\task_6.2_netcore\task_6.2_netcore\bin\Debug\netcoreapp2.1\task_6.2_netcore.runtimeconfig.json
+C:\temp\Tugas Mas  Dhika\14-09-2020\Task 6.2\Practical Task 6.2\task_6.2_netcore\task_6.2_netcore\bin\Debug\netcoreapp2.1\task_6.2_netcore.runtimeconfig.dev.json
+C:\temp\Tugas Mas  Dhika\14-09-2020\Task 6.2\Practical Task 6.2\task_6.2_netcore\task_6.2_netcore\bin\Debug\netcoreapp2.1\task_6.2_netcore.dll
+C:\temp\Tugas Mas  Dhika\14-09-2020\Task 6.2\Practical Task 6.2\task_6.2_netcore\task_6.2_netcore\bin\Debug\netcoreapp2.1\task_6.2_netcore.pdb
+C:\temp\Tugas Mas  Dhika\14-09-2020\Task 6.2\Practical Task 6.2\task_6.2_netcore\task_6.2_netcore\obj\Debug\netcoreapp2.1\task_6.2_netcore.csprojAssemblyReference.cache
+C:\temp\Tugas Mas  Dhika\14-09-2020\Task 6.2\Practical Task 6.2\task_6.2_netcore\task_6.2_netcore\obj\Debug\netcoreapp2.1\task_6.2_netcore.csproj.CoreCompileInputs.cache
+C:\temp\Tugas Mas  Dhika\14-09-2020\Task 6.2\Practical Task 6.2\task_6.2_netcore\task_6.2_netcore\obj\Debug\netcoreapp2.1\task_6.2_netcore.AssemblyInfoInputs.cache
+C:\temp\Tugas Mas  Dhika\14-09-2020\Task 6.2\Practical Task 6.2\task_6.2_netcore\task_6.2_netcore\obj\Debug\netcoreapp2.1\task_6.2_netcore.AssemblyInfo.cs
+C:\temp\Tugas Mas  Dhika\14-09-2020\Task 6.2\Practical Task 6.2\task_6.2_netcore\task_6.2_netcore\obj\Debug\netcoreapp2.1\task_6.2_netcore.dll
+C:\temp\Tugas Mas  Dhika\14-09-2020\Task 6.2\Practical Task 6.2\task_6.2_netcore\task_6.2_netcore\obj\Debug\netcoreapp2.1\task_6.2_netcore.pdb

@@ -1,0 +1,23 @@
+C:\temp\Tugas Mas  Dhika\03-09-2020\task4.1\bin\Debug\netcoreapp2.1\task4.1.deps.json
+C:\temp\Tugas Mas  Dhika\03-09-2020\task4.1\bin\Debug\netcoreapp2.1\task4.1.runtimeconfig.json
+C:\temp\Tugas Mas  Dhika\03-09-2020\task4.1\bin\Debug\netcoreapp2.1\task4.1.runtimeconfig.dev.json
+C:\temp\Tugas Mas  Dhika\03-09-2020\task4.1\bin\Debug\netcoreapp2.1\task4.1.dll
+C:\temp\Tugas Mas  Dhika\03-09-2020\task4.1\bin\Debug\netcoreapp2.1\task4.1.pdb
+C:\temp\Tugas Mas  Dhika\03-09-2020\task4.1\obj\Debug\netcoreapp2.1\task4.1.csprojAssemblyReference.cache
+C:\temp\Tugas Mas  Dhika\03-09-2020\task4.1\obj\Debug\netcoreapp2.1\task4.1.csproj.CoreCompileInputs.cache
+C:\temp\Tugas Mas  Dhika\03-09-2020\task4.1\obj\Debug\netcoreapp2.1\task4.1.AssemblyInfoInputs.cache
+C:\temp\Tugas Mas  Dhika\03-09-2020\task4.1\obj\Debug\netcoreapp2.1\task4.1.AssemblyInfo.cs
+C:\temp\Tugas Mas  Dhika\03-09-2020\task4.1\obj\Debug\netcoreapp2.1\task4.1.dll
+C:\temp\Tugas Mas  Dhika\03-09-2020\task4.1\obj\Debug\netcoreapp2.1\task4.1.pdb
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\task4.1\task4.1\bin\Debug\netcoreapp2.1\task4.1.deps.json
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\task4.1\task4.1\bin\Debug\netcoreapp2.1\task4.1.runtimeconfig.json
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\task4.1\task4.1\bin\Debug\netcoreapp2.1\task4.1.runtimeconfig.dev.json
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\task4.1\task4.1\bin\Debug\netcoreapp2.1\task4.1.dll
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\task4.1\task4.1\bin\Debug\netcoreapp2.1\task4.1.pdb
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\task4.1\task4.1\obj\Debug\netcoreapp2.1\task4.1.csprojAssemblyReference.cache
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\task4.1\task4.1\obj\Debug\netcoreapp2.1\task4.1.csproj.CoreCompileInputs.cache
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\task4.1\task4.1\obj\Debug\netcoreapp2.1\task4.1.AssemblyInfoInputs.cache
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\task4.1\task4.1\obj\Debug\netcoreapp2.1\task4.1.AssemblyInfo.cs
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\task4.1\task4.1\obj\Debug\netcoreapp2.1\task4.1.dll
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\task4.1\task4.1\obj\Debug\netcoreapp2.1\task4.1.pdb
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\task4.1\task4.1\obj\Debug\netcoreapp2.1\task4.1.genruntimeconfig.cache

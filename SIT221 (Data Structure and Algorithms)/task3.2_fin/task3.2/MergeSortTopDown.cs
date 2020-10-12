@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vector
+namespace task3._2
 {
     // Merge Sort (Top Down)
     public class MergeSortTopDown : ISorter

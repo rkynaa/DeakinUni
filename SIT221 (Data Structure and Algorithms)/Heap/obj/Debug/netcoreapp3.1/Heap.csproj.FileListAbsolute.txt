@@ -1,0 +1,13 @@
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\Heap\bin\Debug\netcoreapp3.1\Heap.exe
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\Heap\bin\Debug\netcoreapp3.1\Heap.deps.json
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\Heap\bin\Debug\netcoreapp3.1\Heap.runtimeconfig.json
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\Heap\bin\Debug\netcoreapp3.1\Heap.runtimeconfig.dev.json
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\Heap\bin\Debug\netcoreapp3.1\Heap.dll
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\Heap\bin\Debug\netcoreapp3.1\Heap.pdb
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\Heap\obj\Debug\netcoreapp3.1\Heap.csprojAssemblyReference.cache
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\Heap\obj\Debug\netcoreapp3.1\Heap.csproj.CoreCompileInputs.cache
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\Heap\obj\Debug\netcoreapp3.1\Heap.AssemblyInfoInputs.cache
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\Heap\obj\Debug\netcoreapp3.1\Heap.AssemblyInfo.cs
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\Heap\obj\Debug\netcoreapp3.1\Heap.dll
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\Heap\obj\Debug\netcoreapp3.1\Heap.pdb
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\Heap\obj\Debug\netcoreapp3.1\Heap.genruntimeconfig.cache

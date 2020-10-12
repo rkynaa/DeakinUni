@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <RootNamespace>task4._1</RootNamespace>
+    <StartupObject>task4._1.Tester</StartupObject>
+  </PropertyGroup>
+
+</Project>

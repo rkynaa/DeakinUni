@@ -1,0 +1,13 @@
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\CoinRepresentation\bin\Debug\netcoreapp3.1\CoinRepresentation.exe
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\CoinRepresentation\bin\Debug\netcoreapp3.1\CoinRepresentation.deps.json
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\CoinRepresentation\bin\Debug\netcoreapp3.1\CoinRepresentation.runtimeconfig.json
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\CoinRepresentation\bin\Debug\netcoreapp3.1\CoinRepresentation.runtimeconfig.dev.json
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\CoinRepresentation\bin\Debug\netcoreapp3.1\CoinRepresentation.dll
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\CoinRepresentation\bin\Debug\netcoreapp3.1\CoinRepresentation.pdb
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\CoinRepresentation\obj\Debug\netcoreapp3.1\CoinRepresentation.csprojAssemblyReference.cache
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\CoinRepresentation\obj\Debug\netcoreapp3.1\CoinRepresentation.csproj.CoreCompileInputs.cache
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\CoinRepresentation\obj\Debug\netcoreapp3.1\CoinRepresentation.AssemblyInfoInputs.cache
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\CoinRepresentation\obj\Debug\netcoreapp3.1\CoinRepresentation.AssemblyInfo.cs
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\CoinRepresentation\obj\Debug\netcoreapp3.1\CoinRepresentation.dll
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\CoinRepresentation\obj\Debug\netcoreapp3.1\CoinRepresentation.pdb
+C:\Users\Rakyan\Documents\GitHub\DeakinUni\SIT221 (Data Structure and Algorithms)\CoinRepresentation\obj\Debug\netcoreapp3.1\CoinRepresentation.genruntimeconfig.cache
